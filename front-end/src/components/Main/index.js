@@ -6,11 +6,11 @@ import "swiper/css/effect-fade";
 import "swiper/css/autoplay";
 
 import styles from "./Main.module.css";
-import mainInfoImg from "assets/image/img_mainInfo.png";
-import mainSwiperImg_1 from "assets/image/img_main1.jpg";
-import mainSwiperImg_2 from "assets/image/img_main2.jpg";
-import mainSwiperImg_3 from "assets/image/img_main3.jpg";
-import mainSwiperImg_4 from "assets/image/img_main4.jpg";
+import mainInfoImg from "assets/images/img_mainInfo.png";
+import mainSwiperImg_1 from "assets/images/img_main1.jpg";
+import mainSwiperImg_2 from "assets/images/img_main2.jpg";
+import mainSwiperImg_3 from "assets/images/img_main3.jpg";
+import mainSwiperImg_4 from "assets/images/img_main4.jpg";
 
 const IMAGE_DATAS = [
   mainSwiperImg_1,
@@ -32,11 +32,7 @@ const Main = () => {
       >
         {IMAGE_DATAS.map((imageData, index) => {
           return (
-            <SwiperSlide
-              className={styles.main_swiper}
-              key={index}
-              onChange={console.log(imageData)}
-            >
+            <SwiperSlide className={styles.main_swiper} key={index}>
               <img
                 src={imageData}
                 className={styles.main_image}
