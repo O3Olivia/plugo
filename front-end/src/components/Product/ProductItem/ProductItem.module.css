@@ -1,0 +1,25 @@
+.product_item_section {
+  flex-wrap: wrap;
+  margin-left: 17px;
+}
+.product_item_section a {
+  text-decoration: none;
+  color: #312e2ecc;
+}
+.product_item_section a:hover {
+  opacity: 0.6;
+}
+
+.product_item_section_image img {
+  max-width: 240px;
+}
+.product_item_section_title h1 {
+  font-size: 18px;
+  margin: 0;
+  padding-top: 12px;
+}
+.product_item_section_title p {
+  font-size: 15px;
+  margin: 0;
+  padding: 3px 0 12px 0;
+}

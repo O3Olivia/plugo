@@ -1,0 +1,95 @@
+div,
+p,
+h1 {
+  margin: 0;
+}
+.product_detail_section {
+  width: 80%;
+  margin: 0 auto;
+  color: #312e2ee9;
+}
+.product_detail_wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 100px 0 20px 0;
+}
+.product_detail_section_image_section {
+  grid-area: 1/1/2/2;
+}
+.product_detail_section_image_section img {
+  max-width: 60%;
+  display: flex;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.product_detail_section_info {
+  grid-area: 1/2/2/2;
+  max-width: 500px;
+}
+.product_detail_section_info section h1 {
+  padding: 15px 0 10px 0;
+  font-size: 22px;
+}
+.product_detail_section_info section p {
+  font-size: 17px;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+.product_detail_section_info section p:nth-child(1) {
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 0;
+}
+
+.product_detail_section_info button {
+  background-color: inherit;
+  border-color: #86745b;
+  color: #312e2ee9;
+  margin-top: 25px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.product_detail_section_info button {
+  background-color: rgba(165, 143, 112, 0.11);
+}
+.product_detail_section_delivery {
+  border: 1px solid #efefef;
+  border-radius: 12px;
+  padding: 10px 15px;
+  margin-top: 10px;
+}
+.product_detail_section_delivery > h1 {
+  margin: 0;
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.product_detail_section_delivery > p {
+  margin: 0;
+  font-size: 15px;
+}
+.product_detail_section_info button {
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  border: 1px solid #86745b;
+  color: #312e2ee9;
+  margin-top: 25px;
+  padding: 12px 40px;
+  border-radius: 5px;
+}
+.product_detail_section_info button:hover {
+  background-color: #86745b;
+  color: #fff;
+  cursor: pointer;
+}
+.product_detail_section_suggest_items {
+  background: #fff;
+  padding: 2rem;
+  padding: 2rem;
+  text-align: center;
+  grid-area: 2 / 1 / 3 / 3;
+  margin-top: 20px;
+}
