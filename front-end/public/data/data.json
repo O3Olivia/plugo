@@ -58,5 +58,45 @@
     "description": "This hijab features a soft pastel pink that's an absolute must-have for your collection",
     "size": ["F"],
     "color": "soft pink"
+  },
+  {
+    "id": "7",
+    "category": "hijab",
+    "imageUrls": "/images/hijab4.jpg",
+    "price": 199000,
+    "title": "Satin Dress - Light Cream",
+    "description": "This hijab features a light cream that's perfect for daily-basis.",
+    "size": ["F"],
+    "color": "light cream"
+  },
+  {
+    "id": "8",
+    "category": "hijab",
+    "imageUrls": "/images/hijab5.jpg",
+    "price": 199000,
+    "title": "Satin Dress - Dark Green",
+    "description": "This hijab features a dark green that's perfect for any skin tone.",
+    "size": ["F"],
+    "color": "dark green"
+  },
+  {
+    "id": "9",
+    "category": "accessories",
+    "imageUrls": "/images/sunglasses1.jpg",
+    "price": 298000,
+    "title": "Small Cat Eye - Black",
+    "description": "These sunglasses feature a cat-eye design. They have a plastic frame and tinted lenses which features uv protection.",
+    "size": ["F"],
+    "color": "black"
+  },
+  {
+    "id": "10",
+    "category": "accessories",
+    "imageUrls": "/images/sunglasses2.jpg",
+    "price": 278000,
+    "title": "Big Rounded Edge - Black",
+    "description": "These sunglasses feature rounded, big edges. They have lenses with uv protection.",
+    "size": ["F"],
+    "color": "black"
   }
 ]
