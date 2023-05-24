@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "category": "dress",
+    "imageUrls": "/images/dress1.jpg",
+    "price": 449000,
+    "title": "Satin Dress - Pink",
+    "description": "This Max dress is made of satin and comes in pink",
+    "size": "F",
+    "color": "pink"
+  },
+  {
+    "id": "2",
+    "category": "dress",
+    "imageUrls": "/images/dress2.jpg",
+    "price": 379000,
+    "title": "Seersucker Dress - White",
+    "description": "This Max dress is made of seersucker and comes in white",
+    "size": "F",
+    "color": "white"
+  },
+  {
+    "id": "3",
+    "category": "dress",
+    "imageUrls": "/images/dress3.jpg",
+    "price": 479000,
+    "title": "Satin Dress - Dusty Pink",
+    "description": "This Max dress is made of satin and comes in dusty pink",
+    "size": "F",
+    "color": "dusty pink"
+  },
+  {
+    "id": "4",
+    "category": "hijab",
+    "imageUrls": "/images/hijab1.jpg",
+    "price": 179000,
+    "title": "Hijab - Light Beige",
+    "description": "This hijab features a light beige that's perfect for any occasion.",
+    "size": ["F"],
+    "color": "light beige"
+  },
+  {
+    "id": "5",
+    "category": "hijab",
+    "imageUrls": "/images/hijab2.jpg",
+    "price": 199000,
+    "title": "Hijab - Rosewood",
+    "description": "This hijab features a dusty pink that will pair beautifully with any kin tone.",
+    "size": ["F"],
+    "color": "rosewood"
+  },
+  {
+    "id": "6",
+    "category": "hijab",
+    "imageUrls": "/images/hijab3.jpg",
+    "price": 189000,
+    "title": "Satin Dress - Soft Pink",
+    "description": "This hijab features a soft pastel pink that's an absolute must-have for your collection",
+    "size": ["F"],
+    "color": "soft pink"
+  }
+]
