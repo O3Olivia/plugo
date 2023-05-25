@@ -1,0 +1,16 @@
+.product_detail_quantity button {
+  width: 100%;
+  padding: 10px 13px;
+  margin: 10px 0 20px 0;
+  background-color: #86745b;
+  border: 0;
+  outline: 0;
+  border: 1px solid #86745b;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  color: #fff;
+}
+.product_detail_quantity button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}

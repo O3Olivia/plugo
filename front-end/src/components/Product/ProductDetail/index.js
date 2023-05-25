@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import ProductQuantityForm from "components/UI/ProductQuantityForm";
 import styles from "./ProductDetail.module.css";
 import useProductItems from "hooks/useProductItems";
 
@@ -6,7 +7,9 @@ const ProductDetail = (props) => {
   const { id } = useParams();
   const { findProduct } = useProductItems(id);
 
-  const handleAddToCart = (quantity) => {};
+  const handleAddToCart = (quantity) => {
+    //
+  };
 
   return (
     <section className={styles.product_detail_section}>
@@ -21,7 +24,9 @@ const ProductDetail = (props) => {
             <p>{findProduct.category}</p>
             <h1>{findProduct.title}</h1>
             <p>RP {findProduct.price}</p>
-            <div></div>
+            <div>
+              <ProductQuantityForm onAddToCart={handleAddToCart} />
+            </div>
             <p>
               <strong>COLOR: </strong>
               {findProduct.color}
