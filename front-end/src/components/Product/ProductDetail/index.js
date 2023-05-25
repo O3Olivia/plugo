@@ -1,33 +1,24 @@
 import { useParams } from "react-router-dom";
-import { useRecoilState } from "recoil";
-import cartsState from "atoms/cartsState";
 import ProductQuantityForm from "components/UI/ProductQuantityForm";
 import styles from "./ProductDetail.module.css";
 import useProductItems from "hooks/useProductItems";
+import useModal from "hooks/useModal";
+import Modal from "components/UI/Modal";
 
 const ProductDetail = (props) => {
   const { id } = useParams();
-  const [cartItem, setCartItem] = useRecoilState(cartsState);
-  const { findProduct } = useProductItems(id);
-  const handleAddToCart = (quantity) => {
-    // 같은 상품을 cart에 담으면 장바구니 quantity가 늘어나지 않는다.
-    if (cartItem.findIndex(({ id }) => id === findProduct.id) === -1) {
-      setCartItem((prevState) => [
-        ...prevState,
-        {
-          ...findProduct,
-          quantity: quantity,
-        },
-      ]);
-    } else {
-      setCartItem((prevState) =>
-        prevState.map((item) =>
-          item.id === findProduct.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        )
-      );
-    }
+  const { findProduct, handleAddToCart } = useProductItems(id);
+  const {
+    showModal,
+    message,
+    handleOpenModal,
+    handleCloseModal,
+    handleMessageChange,
+    handleSendMessage,
+  } = useModal();
+
+  const handleAddToCartClick = (quantity) => {
+    handleAddToCart(quantity);
   };
 
   return (
@@ -44,7 +35,7 @@ const ProductDetail = (props) => {
             <h1>{findProduct.title}</h1>
             <p>RP {findProduct.price}</p>
             <div>
-              <ProductQuantityForm onAddToCart={handleAddToCart} />
+              <ProductQuantityForm onAddToCart={handleAddToCartClick} />
             </div>
             <p>
               <strong>COLOR: </strong>
@@ -64,9 +55,20 @@ const ProductDetail = (props) => {
               (After payment confirmed)
             </p>
           </div>
-          <button>Send a message to Gonegani?</button>
+          <button onClick={handleOpenModal}>Send a message to Gonegani?</button>
         </div>
-        <div className={styles.product_detail_section_suggest_items}></div>
+        <div className={styles.modal_section}>
+          <Modal isOpen={showModal} onClose={handleCloseModal}>
+            <h2>What would you like to ask about this product?</h2>
+            <input
+              type="text"
+              value={message}
+              onChange={handleMessageChange}
+              placeholder="Enter your message..."
+            />
+            <button onClick={handleSendMessage}>SEND</button>
+          </Modal>
+        </div>
       </div>
     </section>
   );
