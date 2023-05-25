@@ -12,6 +12,8 @@
 
 .product_item_section_image img {
   max-width: 240px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 .product_item_section_title h1 {
   font-size: 18px;

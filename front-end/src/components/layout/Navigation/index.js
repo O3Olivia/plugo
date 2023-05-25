@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import cartsState from "atoms/cartsState";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import logo from "assets/images/img_logo.png";
 import * as $ from "./styles";
 
 const Navigation = () => {
   const [navBackground, setNavBackground] = useState(false);
+  const [cartItem, setCartItem] = useRecoilState(cartsState);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -49,6 +52,7 @@ const Navigation = () => {
           <li>
             <Link to="/cart">
               <MdOutlineShoppingCart />
+              {cartItem.length}
             </Link>
           </li>
         </ul>

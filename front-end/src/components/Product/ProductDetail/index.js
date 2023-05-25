@@ -1,14 +1,33 @@
 import { useParams } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import cartsState from "atoms/cartsState";
 import ProductQuantityForm from "components/UI/ProductQuantityForm";
 import styles from "./ProductDetail.module.css";
 import useProductItems from "hooks/useProductItems";
 
 const ProductDetail = (props) => {
   const { id } = useParams();
+  const [cartItem, setCartItem] = useRecoilState(cartsState);
   const { findProduct } = useProductItems(id);
-
   const handleAddToCart = (quantity) => {
-    //
+    // 같은 상품을 cart에 담으면 장바구니 quantity가 늘어나지 않는다.
+    if (cartItem.findIndex(({ id }) => id === findProduct.id) === -1) {
+      setCartItem((prevState) => [
+        ...prevState,
+        {
+          ...findProduct,
+          quantity: quantity,
+        },
+      ]);
+    } else {
+      setCartItem((prevState) =>
+        prevState.map((item) =>
+          item.id === findProduct.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
+    }
   };
 
   return (
