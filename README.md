@@ -1,4 +1,4 @@
-### Plugo_frontend assignment
+# Plugo_frontend assignment ✨
 
 ## 기술 스택
 
