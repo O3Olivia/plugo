@@ -1,4 +1,4 @@
-# Plugo_frontend assignment ✨
+# Simple E-commerce Page ✨
 
 ## 구현 화면
 ![ezgif com-video-to-gif](https://github.com/O3Olivia/plugo/assets/87024040/11da4039-cf6c-40db-8734-8e6540096af0)
